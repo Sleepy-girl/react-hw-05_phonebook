@@ -36,7 +36,7 @@ export class App extends Component {
 
   addToContacts = (objectContact) => {
     this.state.contacts.find((contact) => contact.name === objectContact.name)
-      ? this.setState((prevState) => ({ alert: !prevState.alert }))
+      ? this.setState((prevState) => ({ alert: true }))
       : this.setState((prevState) => {
           return {
             contacts: [...prevState.contacts, objectContact],
