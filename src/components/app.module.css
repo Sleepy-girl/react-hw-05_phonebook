@@ -1,0 +1,20 @@
+.wrapper {
+  width: 660px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  color: royalblue;
+  margin-bottom: 30px;
+}
+.titleEmpty {
+  composes: title;
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0 auto;
+}
+.wrapperTitleWithAlert {
+  display: flex;
+  justify-content: space-between;
+}

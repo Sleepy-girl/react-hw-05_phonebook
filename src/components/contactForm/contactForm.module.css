@@ -1,0 +1,36 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  padding: 30px;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+}
+.label {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 30px;
+}
+.input {
+  width: 600px;
+  line-height: 50px;
+  border-radius: 6px;
+  border: 1px solid grey;
+}
+.btnAddContant {
+  background-color: rgb(65, 105, 225);
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 50px;
+  border-radius: 6px;
+  border: 1px solid rgb(48, 90, 217);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.4);
+}
+
+.btnAddContant:hover,
+.btnAddContant:focus {
+  background-color: rgb(33, 81, 224);
+}
