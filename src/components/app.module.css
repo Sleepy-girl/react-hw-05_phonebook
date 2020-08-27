@@ -1,3 +1,12 @@
+/* Animation */
+.appear {
+  transform: translateX(-100%);
+}
+.appearActive {
+  transform: translateX(0);
+  transition: all 500ms linear;
+}
+
 .wrapper {
   width: 660px;
   padding: 30px;

@@ -2,15 +2,13 @@ import React, { Component } from "react";
 import ContactForm from "./contactForm/ContactForm";
 import Filter from "./filter/Filter";
 import ContactList from "./contactList/ContactList";
-import { object } from "prop-types";
+// import { object } from "prop-types";
 import styles from "./app.module.css";
-import "./app.css";
 import { CSSTransition } from "react-transition-group";
 import AlertError from "./alertError/AlertError";
 
 export class App extends Component {
   state = {
-    // phonebook: false,
     alert: false,
     contacts: [],
     filter: "",
@@ -18,7 +16,6 @@ export class App extends Component {
 
   componentDidMount() {
     console.log("Contact componentDidMount");
-    // this.setState((prevState) => ({ phonebook: !prevState.phonebook }));
 
     const persistedContacts = localStorage.getItem("contacts");
     if (persistedContacts) {
@@ -69,14 +66,14 @@ export class App extends Component {
   };
 
   render() {
-    const { filter, contacts, alert, phonebook } = this.state;
+    const { filter, contacts, alert } = this.state;
     // const contacts = this.state.contacts;
 
     return (
       <div className={styles.wrapper}>
         <div className={styles.wrapperTitleWithAlert}>
           <CSSTransition
-            classNames="fade"
+            classNames={styles}
             in={true}
             appear={true}
             timeout={500}
@@ -84,14 +81,7 @@ export class App extends Component {
           >
             <h1 className={styles.title}>Phonebook</h1>
           </CSSTransition>
-          {/* <CSSTransition
-            classNames="alert"
-            in={alert}
-            timeout={250}
-            unmountOnExit
-          > */}
           <AlertError closeAlert={this.closeAlert} alert={alert} />
-          {/* </CSSTransition> */}
         </div>
         <ContactForm onSubmit={this.addToContacts} />
         {contacts.length > 0 ? (

@@ -1,3 +1,19 @@
+/* Animation */
+.enter {
+  transform: translateX(100%);
+}
+.enterActive {
+  transform: translateX(0);
+  transition: all 250ms linear;
+}
+.exit {
+  transform: translateX(0);
+}
+.exitActive {
+  transform: translateX(100%);
+  transition: all 250ms linear;
+}
+
 .alert {
   width: 300px;
   height: 50px;

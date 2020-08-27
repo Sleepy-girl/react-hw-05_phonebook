@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./contactList.module.css";
-import "./contactList.css";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 function ContactList({ contacts, onRemoveContact }) {
@@ -9,9 +8,10 @@ function ContactList({ contacts, onRemoveContact }) {
       {contacts.map((contact) => (
         <CSSTransition
           key={contact.id}
-          timeout={1500}
-          classNames="contactListItem"
+          timeout={500}
+          classNames={styles}
           className={styles.contactListItem}
+          // unmountOnExit
         >
           <div>
             <div className={styles.contactWrapper}>
