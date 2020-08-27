@@ -10,7 +10,7 @@ import AlertError from "./alertError/AlertError";
 
 export class App extends Component {
   state = {
-    phonebook: false,
+    // phonebook: false,
     alert: false,
     contacts: [],
     filter: "",
@@ -18,7 +18,7 @@ export class App extends Component {
 
   componentDidMount() {
     console.log("Contact componentDidMount");
-    this.setState((prevState) => ({ phonebook: !prevState.phonebook }));
+    // this.setState((prevState) => ({ phonebook: !prevState.phonebook }));
 
     const persistedContacts = localStorage.getItem("contacts");
     if (persistedContacts) {
@@ -77,14 +77,21 @@ export class App extends Component {
         <div className={styles.wrapperTitleWithAlert}>
           <CSSTransition
             classNames="fade"
-            in={phonebook}
+            in={true}
+            appear={true}
             timeout={500}
             unmountOnExit
           >
             <h1 className={styles.title}>Phonebook</h1>
           </CSSTransition>
-
-          {alert && <AlertError closeAlert={this.closeAlert} alert={alert} />}
+          {/* <CSSTransition
+            classNames="alert"
+            in={alert}
+            timeout={250}
+            unmountOnExit
+          > */}
+          <AlertError closeAlert={this.closeAlert} alert={alert} />
+          {/* </CSSTransition> */}
         </div>
         <ContactForm onSubmit={this.addToContacts} />
         {contacts.length > 0 ? (

@@ -1,19 +1,18 @@
 /* Animation */
 
-.fade-enter {
+.fade-appear {
   transform: translateX(-100%);
 }
-.fade-enter-active {
+.fade-appear-active {
   transform: translateX(0);
-
   transition: all 500ms linear;
 }
 
-.alert-enter {
-  transform: translateX(-100%);
+/* .alert-enter {
+  transform: translateX(100%);
 }
 .alert-enter-active {
-  transform: translateX(100%);
+  transform: translateX(0);
   transition: all 250ms linear;
 }
 .alert-exit {
@@ -22,4 +21,4 @@
 .alert-exit-active {
   transform: translateX(100%);
   transition: all 250ms linear;
-}
+} */

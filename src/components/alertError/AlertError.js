@@ -6,7 +6,14 @@ import { CSSTransition } from "react-transition-group";
 function AlertError({ closeAlert, alert }) {
   // console.log("alert", alert);
   return (
-    <CSSTransition classNames="alert" in={alert} timeout={250} unmountOnExit>
+    <CSSTransition
+      classNames="alert"
+      in={alert}
+      timeout={250}
+      unmountOnExit
+      // onEnter={() => closeAlert(false)}
+      // onExited={() => closeAlert(true)}
+    >
       <div className={styles.alert} onClick={closeAlert}>
         <span className={styles.message}>Contact already exists!</span>
       </div>
